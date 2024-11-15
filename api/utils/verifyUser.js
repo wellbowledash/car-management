@@ -10,6 +10,7 @@ export const verifyToken = (req, res, next) => {
   }
 
   jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+    console.log(process.env.JWT_SECRET)
     if (err) {
         return next(errorHandler(401, 'Unauthorized'))
     }

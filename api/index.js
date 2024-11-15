@@ -1,7 +1,6 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
-import cookieParser from 'cookie-parser'
 import userRoutes from './routes/user.routes.js'
 import carRoutes from './routes/car.routes.js'
 import cors from 'cors'

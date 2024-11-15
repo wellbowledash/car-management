@@ -56,7 +56,7 @@ export const signup = async (req,res,next)=>{
           {
              userId : validUser._id,
           },
-          process.env.JWT_SECRET,
+          `${process.env.JWT_SECRET}`,
           {expiresIn: "1h"}
           
  
