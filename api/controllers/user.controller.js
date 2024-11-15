@@ -64,7 +64,7 @@ export const signup = async (req,res,next)=>{
        )
        const{password:pass, ...rest} = validUser._doc
        res.status(200).json({
-         message: "Sign-in successful", token,rest
+         message: "Sign-in successful", token
         }
         );
       }

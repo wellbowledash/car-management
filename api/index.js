@@ -3,6 +3,7 @@ import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 import userRoutes from './routes/user.routes.js'
 import carRoutes from './routes/car.routes.js'
+import docsRoute from './routes/docs.js'
 import cors from 'cors'
 dotenv.config()
 const app  = express()
@@ -26,7 +27,7 @@ app.listen(3000, ()=>{
 
 app.use("/api/users", userRoutes); 
 app.use("/api/cars", carRoutes); 
-
+app.use("/api/docs", docsRoute);
 app.use((err, req, res, next)=>{
     const statusCode = err.statusCode || 500
     const message = err.message || 'Internal Server Error'
