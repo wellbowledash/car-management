@@ -10,8 +10,8 @@ export default function SignUp() {
         await signUp(data);
         navigate('/login');
       } catch (error) {
-        setError(error.response.data.message)
-        console.error('Sign up failed:', error);
+        setError("signup failed")
+        
       }
     };
   

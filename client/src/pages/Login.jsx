@@ -12,8 +12,8 @@ export default function Login() {
         localStorage.setItem('userName', response.rest.name) // Store token for session management
         navigate('/products');
       } catch (error) {
-        setError(error.response.data.message)
-        console.error('Login failed:', error);
+        setError("Login failed")
+        
       }
     };
   
