@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/api';
+const API_URL = 'https://car-management-api.vercel.app/api';
 
 export const createCar = async (carData) => {
     const token = localStorage.getItem('token'); // Retrieve token from localStorage
