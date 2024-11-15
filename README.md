@@ -1,2 +1,2 @@
-Frontend(Main) Link : https://car-management-client-mauve.vercel.app
-Backend(API) Link : https://car-management-api.vercel.app
+- Deployed Link : https://car-management-client-mauve.vercel.app
+- API Documentation : https://car-management-api.vercel.app/api/docs
