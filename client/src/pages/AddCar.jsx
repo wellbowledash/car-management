@@ -9,7 +9,11 @@ export default function AddCar() {
     const [uploading, setUploading] = useState(false);
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
-  
+    const token = localStorage.getItem('token');
+    if (!token) {
+      navigate('/login'); // Redirect to login if user is not logged in
+      return;
+    }
     
     const handleImageUpload = async (event) => {
       setError('');

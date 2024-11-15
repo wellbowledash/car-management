@@ -24,6 +24,11 @@ export default function CarDetail()  {
   const [currentImage, setCurrentImage] = useState(null);
 
   useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      navigate('/login'); // Redirect to login if user is not logged in
+      return;
+    }
     const loadCarDetails = async () => {
       try {
         const carData = await fetchCarDetails(id);
